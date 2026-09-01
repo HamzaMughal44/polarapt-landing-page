@@ -112,7 +112,7 @@ export default function ThreeBackground() {
         specular: new THREE.Color(0xaaaaff),
       });
       const mesh = new THREE.Mesh(geo, mat);
-      mesh.position.set(...pos);
+      mesh.position.set(pos[0], pos[1], pos[2]);
       scene.add(mesh);
 
       objects.push({
