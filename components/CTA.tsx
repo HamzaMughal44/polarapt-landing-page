@@ -12,6 +12,7 @@ export default function CTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="relative overflow-hidden rounded-2xl shadow-2xl shadow-blue-900/30"
+        >
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 animate-gradient" />
 
