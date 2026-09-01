@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-sora font-semibold text-3xl sm:text-4xl lg:text-5xl text-ink tracking-tight leading-[1.15]"
+              className="font-sora font-semibold text-2xl sm:text-3xl lg:text-5xl text-ink tracking-tight leading-[1.15]"
             >
               Every person on your team, <TypewriterText />
             </motion.h1>

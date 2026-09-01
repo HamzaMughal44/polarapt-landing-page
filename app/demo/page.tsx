@@ -184,7 +184,7 @@ export default function DemoPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.0, duration: 0.6 }}
-                  className="grid grid-cols-3 gap-4"
+                  className="grid grid-cols-3 gap-3"
                 >
                   {[
                     { value: "500+", label: "Companies" },
@@ -219,7 +219,7 @@ export default function DemoPage() {
 
                       <form onSubmit={handleSubmit} className="space-y-4">
                         {/* Name row */}
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
                             <label className="block text-xs font-semibold text-ink mb-1.5">First name *</label>
                             <input
@@ -278,7 +278,7 @@ export default function DemoPage() {
                         </div>
 
                         {/* Company + Website */}
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
                             <label className="block text-xs font-semibold text-ink mb-1.5">Company name *</label>
                             <div className="relative">
@@ -309,7 +309,7 @@ export default function DemoPage() {
                         </div>
 
                         {/* Company size + Industry */}
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
                             <label className="block text-xs font-semibold text-ink mb-1.5">Company size *</label>
                             <div className="relative">

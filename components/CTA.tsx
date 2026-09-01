@@ -12,7 +12,6 @@ export default function CTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="relative overflow-hidden rounded-2xl shadow-2xl shadow-blue-900/30"
-        >
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 animate-gradient" />
 
@@ -28,7 +27,7 @@ export default function CTA() {
             className="absolute bottom-0 left-0 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl"
           />
 
-          <div className="relative z-10 p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
+          <div className="relative z-10 p-5 sm:p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
             {/* Left Column */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

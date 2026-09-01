@@ -12,7 +12,7 @@ export default function Footer() {
     <footer id="company" className="border-t border-gray-200 pt-10 pb-6 relative overflow-hidden bg-white">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 pb-6 border-b border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 pb-6 border-b border-gray-200">
 
           {/* Column 1: Brand Info */}
           <motion.div
@@ -20,7 +20,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="md:col-span-2 space-y-3"
+            className="md:col-span-2 lg:col-span-2 space-y-3"
           >
             <motion.span
               whileHover={{ scale: 1.05 }}

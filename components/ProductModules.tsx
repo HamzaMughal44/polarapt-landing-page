@@ -87,7 +87,7 @@ export default function ProductModules() {
         </motion.div>
 
         {/* Modules Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {modules.map((module, index) => {
             const colors = colorClasses[module.color as keyof typeof colorClasses];
             return (
@@ -108,7 +108,7 @@ export default function ProductModules() {
                 <motion.div
                   whileHover={{ scale: 1.15, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className={`w-12 h-12 ${colors.bg} ${colors.text} rounded-xl flex items-center justify-center mb-4`}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 ${colors.bg} ${colors.text} rounded-xl flex items-center justify-center mb-4`}
                 >
                   {module.icon}
                 </motion.div>

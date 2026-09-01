@@ -27,7 +27,7 @@ export default function MarqueeTicker() {
         {doubled.map((item, i) => (
           <span
             key={i}
-            className="inline-block text-white/90 text-xs font-semibold tracking-widest uppercase mx-8"
+            className="inline-block text-white/90 text-xs font-semibold tracking-widest uppercase mx-4 sm:mx-6 md:mx-8"
           >
             {item}
           </span>

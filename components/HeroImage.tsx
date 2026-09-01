@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function HeroImage() {
@@ -11,8 +12,8 @@ export default function HeroImage() {
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       className="flex items-center justify-center w-full"
     >
-      {/* Outer wrapper — fixed size, NO overflow clip so cards show */}
-      <div className="relative w-full max-w-[420px] mx-auto" style={{ aspectRatio: "1/1" }}>
+      {/* Outer wrapper */}
+      <div className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] mx-auto" style={{ aspectRatio: "1/1" }}>
 
         {/* Subtle glow blobs behind circle */}
         <motion.div
@@ -45,10 +46,12 @@ export default function HeroImage() {
           transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 overflow-hidden"
         >
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
             alt="HR professional"
             className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 280px, (max-width: 1024px) 340px, 400px"
             onError={(e) => {
               e.currentTarget.src =
                 "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80";
@@ -64,7 +67,7 @@ export default function HeroImage() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
           whileHover={{ scale: 1.06 }}
-          className="absolute -top-6 -left-2 z-20 w-[148px] glass-effect border-2 border-white/80 rounded-2xl p-3 shadow-xl"
+          className="absolute -top-4 left-0 z-20 w-[130px] sm:w-[148px] glass-effect border-2 border-white/80 rounded-2xl p-2.5 sm:p-3 shadow-xl"
         >
           <motion.div
             animate={{ y: [0, -6, 0] }}
@@ -92,7 +95,7 @@ export default function HeroImage() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
           whileHover={{ scale: 1.06 }}
-          className="absolute -top-6 -right-2 z-20 w-[130px] glass-effect border-2 border-white/80 rounded-2xl p-3 shadow-xl"
+          className="absolute -top-4 right-0 z-20 w-[115px] sm:w-[130px] glass-effect border-2 border-white/80 rounded-2xl p-2.5 sm:p-3 shadow-xl"
         >
           <motion.div
             animate={{ y: [0, -7, 0] }}
@@ -134,7 +137,7 @@ export default function HeroImage() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.7, delay: 1.1 }}
           whileHover={{ scale: 1.06 }}
-          className="absolute -bottom-6 -right-2 z-20 w-[168px] glass-effect border-2 border-white/80 rounded-2xl p-3 shadow-xl"
+          className="absolute -bottom-4 right-0 z-20 w-[150px] sm:w-[168px] glass-effect border-2 border-white/80 rounded-2xl p-2.5 sm:p-3 shadow-xl"
         >
           <motion.div
             animate={{ y: [0, -6, 0] }}
@@ -169,7 +172,7 @@ export default function HeroImage() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.7, delay: 1.3 }}
           whileHover={{ scale: 1.06 }}
-          className="absolute -bottom-6 -left-2 z-20 w-[148px] glass-effect border-2 border-white/80 rounded-2xl p-3 shadow-xl"
+          className="absolute -bottom-4 left-0 z-20 w-[130px] sm:w-[148px] glass-effect border-2 border-white/80 rounded-2xl p-2.5 sm:p-3 shadow-xl"
         >
           <motion.div
             animate={{ y: [0, -7, 0] }}

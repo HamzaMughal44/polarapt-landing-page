@@ -34,7 +34,7 @@ export default function Stats() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-5">
           {stats.map((stat, index) => (
             <StatCard key={index} stat={stat} index={index} />
           ))}
@@ -44,7 +44,7 @@ export default function Stats() {
   );
 }
 
-function StatCard({ stat, index }: { stat: any; index: number }) {
+function StatCard({ stat, index }: { stat: { value: number; label: string; color: string; suffix: string }; index: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -54,7 +54,7 @@ function StatCard({ stat, index }: { stat: any; index: number }) {
       let startTime: number;
       const duration = 2000; // 2 seconds
 
-      const animate = (currentTime: number) => {
+      const animate = (currentTime: number): void => {
         if (!startTime) startTime = currentTime;
         const progress = Math.min((currentTime - startTime) / duration, 1);
         
